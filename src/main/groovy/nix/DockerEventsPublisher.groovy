@@ -12,7 +12,7 @@ class DockerEventsPublisher extends EventsResultCallback {
 
   @Override
   void onNext(Event event) {
-    publisher.publish('docker.event', event)
+    publisher.publish('event.docker', event)
     super.onNext(event);
   }
 }
