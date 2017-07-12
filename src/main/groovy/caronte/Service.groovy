@@ -14,8 +14,7 @@ import pluto.events.Publisher
 import pluto.util.Storage
 
 /**
- * Service responsible to hold the logic on how to create and remove
- * templates images from Docker
+ * Service responsible to send Docker events to message broker
  *
  * @since 0.1.0
  */
@@ -31,20 +30,13 @@ class Service {
   DockerClient dockerClient
 
   /**
-   * Worker specific configuration
    *
    * @since 0.1.0
    */
   @Inject
-  Config config
+  DockerEventsPublisher publisher
 
-  /**
-   * Pluto's configured publisher
-   *
-   * @since 0.1.0
-   */
-  @Inject
-  Publisher publisher
-
-
+  void listen() {
+    dockerClient.eventsCmd().exec(publisher).awaitCompletion().close()
+  }
 }
