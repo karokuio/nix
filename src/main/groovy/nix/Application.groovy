@@ -8,7 +8,7 @@ import com.google.inject.Guice
  *
  * @since 0.1.0
  */
-class Application extends PlutoApplication {
+class Application {
 
   /**
    * Worker's main entry point
