@@ -1,17 +1,8 @@
 package nix
 
 import groovy.util.logging.Slf4j
-import groovy.json.JsonOutput
 import javax.inject.Inject
-import java.nio.file.Files
-import java.nio.file.Paths
 import com.github.dockerjava.api.DockerClient
-import com.github.dockerjava.core.command.BuildImageResultCallback
-import com.github.dockerjava.api.model.BuildResponseItem
-import org.zeroturnaround.zip.ZipUtil
-
-import pluto.events.Publisher
-import pluto.util.Storage
 
 /**
  * Service responsible to send Docker events to message broker

@@ -1,6 +1,5 @@
 package nix
 
-import pluto.PlutoApplication
 import com.google.inject.Guice
 
 /**

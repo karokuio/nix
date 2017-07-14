@@ -4,6 +4,6 @@ appender("CONSOLE", ConsoleAppender) {
   }
 }
 
-logger("caronte", DEBUG, ["CONSOLE"], false)
+logger("nix", DEBUG, ["CONSOLE"], false)
 
 root(DEBUG, ['CONSOLE'])

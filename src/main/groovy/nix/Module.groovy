@@ -1,7 +1,6 @@
 package nix
 
 import com.google.inject.Scopes
-import com.google.inject.Provides
 import com.google.inject.AbstractModule
 
 import pluto.Module as PlutoModule
