@@ -1,6 +1,5 @@
 FROM openjdk:8-alpine
 
 COPY nix.jar .
-ENTRYPOINT ["java", "-jar", "nix.jar"]
 
-EXPOSE 5050
+ENTRYPOINT ["./wtfc.sh", "-T", "40", "nc -z rabbit 5672", "&&", "java", "-jar", "nix.jar"]
